@@ -13,7 +13,7 @@ export default function Hero() {
 
   return (
     <section className="pt-16 pb-20 sm:pt-24 sm:pb-28">
-      <Avatar className="size-16 border grayscale transition hover:grayscale-0">
+      <Avatar className="size-16 border transition hover:grayscale-0">
         <AvatarImage src={profile.avatar} alt={profile.name} />
         <AvatarFallback className="font-mono text-sm">{initials}</AvatarFallback>
       </Avatar>
