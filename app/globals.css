@@ -53,7 +53,8 @@
   --input: oklch(0.922 0 0);
   --ring: oklch(0.708 0 0);
   /* The one splash of colour: a soft green, borrowed from the GitHub graph on v3. */
-  --brand: oklch(0.6 0.14 155);
+  /* #1c8598 */
+  --brand: #008ba3; 
 }
 
 /* Dark theme */
@@ -76,7 +77,9 @@
   --border: oklch(1 0 0 / 10%);
   --input: oklch(1 0 0 / 15%);
   --ring: oklch(0.556 0 0);
-  --brand: oklch(0.78 0.15 155);
+  
+  /* #59d38c */
+  --brand: #22d8f8;
 }
 
 @layer base {
