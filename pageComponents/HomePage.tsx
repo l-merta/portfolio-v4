@@ -1,6 +1,7 @@
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import Contact from "@/sections/Contact";
+import Contributions from "@/sections/Contributions";
 import Experience from "@/sections/Experience";
 import Hero from "@/sections/Hero";
 import Projects from "@/sections/Projects";
@@ -13,6 +14,7 @@ export default function HomePage() {
       <Header />
       <main className="mx-auto w-full max-w-3xl flex-1 px-6">
         <Hero />
+        <Contributions />
         <Projects />
         <Skills />
         <Experience />

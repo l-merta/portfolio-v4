@@ -14,6 +14,8 @@ export const profile = {
     "Programování se věnuji od roku 2020 a webovému vývoji od roku 2023. Ať jde o frontend, nebo backend, baví mě dotáhnout nápad až do podoby, kterou lidé opravdu používají.",
     "Své weby hostuji na vlastním domácím serveru s automatizovaným nasazením přes GitHub. Server spravuji sám, běží na něm databáze, subdomény a kontejnerizované aplikace, dostupné přes Cloudflare Tunnel. Baví mě i sítě, 3D modelování nebo grafický design.",
   ],
+  // Used for the contributions chart under the intro.
+  githubUsername: "l-merta",
   links: {
     github: "https://github.com/l-merta",
     cv: "/cv_Lukas_Merta.pdf",
