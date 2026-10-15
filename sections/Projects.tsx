@@ -21,7 +21,7 @@ function ProjectLinks({ project }: { project: Project }) {
           href={project.repo}
           target="_blank"
           rel="noreferrer"
-          aria-label={`${project.name} source code`}
+          aria-label={`Zdrojový kód: ${project.name}`}
           className="transition-colors hover:text-foreground"
         >
           <GithubIcon className="size-4" />
@@ -32,7 +32,7 @@ function ProjectLinks({ project }: { project: Project }) {
           href={project.url}
           target="_blank"
           rel="noreferrer"
-          aria-label={`Open ${project.name}`}
+          aria-label={`Otevřít ${project.name}`}
           className="transition-colors hover:text-brand"
         >
           <ArrowUpRight className="size-4" />
@@ -48,7 +48,7 @@ export default function Projects() {
 
   return (
     <section id="projects" className="scroll-mt-20 py-16">
-      <SectionHeading index="01" title="Projects" />
+      <SectionHeading index="01" title="Projekty" />
 
       <div className="grid gap-4 sm:grid-cols-2">
         {featured.map((project) => (
@@ -84,7 +84,7 @@ export default function Projects() {
 
       {more.length > 0 && (
         <>
-          <h3 className="mt-14 mb-2 text-sm font-medium">More projects</h3>
+          <h3 className="mt-14 mb-2 text-sm font-medium">Další projekty</h3>
           <ul className="divide-y">
             {more.map((project) => (
               <li

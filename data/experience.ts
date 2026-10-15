@@ -10,15 +10,15 @@ export type ExperienceItem = {
 
 export const work: ExperienceItem[] = [
   {
-    title: "Lead developer",
+    title: "Hlavní programátor",
     place: "SmartShark Tech",
-    period: "2025 – now",
+    period: "2025 – nyní",
     description:
-      "Building the company's platform end to end, from the database and API to the client and admin apps and their Docker-based deployment.",
+      "Vyvíjím firemní platformu od databáze a API přes klientskou a administrátorskou aplikaci až po nasazení v Dockeru.",
     url: "https://smartshark.tech",
   },
   {
-    title: "Frontend developer, internship",
+    title: "Praxe, frontend programátor",
     place: "ČEZ",
     period: "2025",
   },
@@ -26,36 +26,39 @@ export const work: ExperienceItem[] = [
 
 export const education: ExperienceItem[] = [
   {
-    title: "Information technology",
+    title: "Obor IT",
     place: "SOŠ informatiky a spojů a SOU Kolín",
-    period: "2022 – now",
+    period: "2022 – nyní",
     url: "https://soskolin.cz",
   },
 ];
 
 export const highlights: ExperienceItem[] = [
   {
-    title: "2nd place out of 160 teams",
+    title: "2. místo ze 160 týmů",
     place: "Tour de App",
     period: "2025",
-    description: "National competition in building a web application.",
+    description: "Soutěž ve tvorbě webové aplikace.",
   },
   {
-    title: "Running my own web server",
-    place: "Self-hosted",
-    period: "2024 – now",
+    title: "Správa vlastního webového serveru",
+    place: "Vlastní hosting",
+    period: "2024 – nyní",
   },
   {
-    title: "2D and 3D game development",
+    title: "Vývoj 2D a 3D her",
     place: "Unity, C#",
     period: "2020 – 2023",
   },
 ];
 
-// A short reference. Translated from the Czech original on portfolio-v3.
+// The reference from portfolio-v3, word for word. Each string is one paragraph.
 export const testimonial = {
-  quote:
-    "Lukáš's approach to work is exemplary. He is hardworking, driven and always ready to take the initiative. His technical knowledge, combined with a creative approach, was a great asset to our team.",
+  quote: [
+    "Lukášův přístup k práci je příkladný — je velmi pracovitý, cílevědomý a vždy ochotný přispět vlastní iniciativou. Oceňujeme zejména jeho schopnost otevřeně komunikovat své názory a přinášet konstruktivní návrhy, které posunuly náš projekt směrem k inovativnějším a efektivnějším řešením.",
+    "Během naší spolupráce přinesl do projektu řadu nových nápadů, které se pozitivně promítly do výsledné podoby platformy. Jeho technické znalosti, kombinované s kreativním přístupem, byly pro náš tým velkým přínosem. Zároveň oceňujeme jeho přirozenou chuť učit se nové věci a schopnost rychle se adaptovat na nové technologie a postupy, což výrazně přispělo k celkovému rozvoji projektu.",
+    "Jeho pracovní nasazení, spolehlivost a chuť neustále se zlepšovat z něj činí cenného člena jakéhokoliv týmu. Věřím, že i v budoucích projektech bude přinášet stejně vysokou úroveň profesionality a přidané hodnoty.",
+  ],
   author: "Jan Plachý",
-  role: "CEO, SmartShark Tech",
+  role: "CEO SmartShark Tech",
 };

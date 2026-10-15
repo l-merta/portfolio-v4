@@ -2,16 +2,17 @@
 
 export const profile = {
   name: "Lukáš Merta",
-  role: "Fullstack web developer",
-  location: "Kolín, Czech Republic",
+  role: "Fullstack webový vývojář",
+  location: "Kolín",
   // Shown as a small green dot next to your role. Set to false to hide it.
   openToWork: true,
+  openToWorkLabel: "přijímám nové projekty",
   avatar: "https://avatars.githubusercontent.com/u/164738919?v=4",
   intro:
-    "I build modern web apps that are fast, clear and pleasant to use. I work across the whole stack, mostly in TypeScript with React, Next.js and Node.",
+    "Zaměřuji se na tvorbu moderních webových aplikací, které jsou funkční a přehledné. Dělám frontend i backend, nejčastěji v TypeScriptu s Reactem, Next.js a Node.",
   about: [
-    "I've been programming since 2020 and building for the web since 2023. Frontend or backend, I enjoy taking an idea all the way to something people can actually use.",
-    "I host my own projects on a home server that I run myself: databases, subdomains and containerised apps, deployed automatically from GitHub and exposed through Cloudflare Tunnel. Outside the browser I like networking, 3D modelling and graphic design.",
+    "Programování se věnuji od roku 2020 a webovému vývoji od roku 2023. Ať jde o frontend, nebo backend, baví mě dotáhnout nápad až do podoby, kterou lidé opravdu používají.",
+    "Své weby hostuji na vlastním domácím serveru s automatizovaným nasazením přes GitHub. Server spravuji sám, běží na něm databáze, subdomény a kontejnerizované aplikace, dostupné přes Cloudflare Tunnel. Baví mě i sítě, 3D modelování nebo grafický design.",
   ],
   links: {
     github: "https://github.com/l-merta",

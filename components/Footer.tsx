@@ -5,7 +5,7 @@ export default function Footer() {
     <footer className="mx-auto w-full max-w-3xl px-6 pb-10">
       <div className="flex flex-col gap-2 border-t pt-6 font-mono text-xs text-muted-foreground sm:flex-row sm:justify-between">
         <span>{profile.name}</span>
-        <span>Built with Next.js & shadcn/ui</span>
+        <span>Vytvořeno s Next.js a shadcn/ui</span>
       </div>
     </footer>
   );

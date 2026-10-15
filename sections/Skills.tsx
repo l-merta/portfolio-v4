@@ -5,7 +5,7 @@ import { skills } from "@/data/skills";
 export default function Skills() {
   return (
     <section id="skills" className="scroll-mt-20 py-16">
-      <SectionHeading index="02" title="Skills" />
+      <SectionHeading index="02" title="Dovednosti" />
 
       <dl className="space-y-6">
         {skills.map((group) => (

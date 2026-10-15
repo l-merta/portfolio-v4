@@ -32,7 +32,7 @@ export default function Hero() {
               <span className="absolute inline-flex size-full animate-ping rounded-full bg-brand opacity-60" />
               <span className="relative inline-flex size-2 rounded-full bg-brand" />
             </span>
-            open to work
+            {profile.openToWorkLabel}
           </span>
         )}
       </p>
@@ -55,12 +55,12 @@ export default function Hero() {
         </Button>
         <Button variant="outline" asChild>
           <a href={profile.links.cv} target="_blank" rel="noreferrer">
-            <FileText /> CV
+            <FileText /> Životopis
           </a>
         </Button>
         <Button variant="ghost" asChild>
           <a href="#projects">
-            See my work <ArrowDown />
+            Moje práce <ArrowDown />
           </a>
         </Button>
       </div>

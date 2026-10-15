@@ -4,10 +4,10 @@ import ThemeToggle from "@/components/ThemeToggle";
 import { profile } from "@/data/profile";
 
 const nav = [
-  { href: "#projects", label: "Projects" },
-  { href: "#skills", label: "Skills" },
-  { href: "#experience", label: "Experience" },
-  { href: "#contact", label: "Contact" },
+  { href: "#projects", label: "Projekty" },
+  { href: "#skills", label: "Dovednosti" },
+  { href: "#experience", label: "Zkušenosti" },
+  { href: "#contact", label: "Kontakt" },
 ];
 
 export default function Header() {

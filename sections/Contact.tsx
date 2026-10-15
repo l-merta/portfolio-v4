@@ -5,15 +5,15 @@ import { profile } from "@/data/profile";
 
 const links = [
   { label: "GitHub", href: profile.links.github },
-  { label: "CV (PDF)", href: profile.links.cv },
+  { label: "Životopis (PDF)", href: profile.links.cv },
 ];
 
 export default function Contact() {
   return (
     <section id="contact" className="scroll-mt-20 py-16">
-      <SectionHeading index="04" title="Contact" />
+      <SectionHeading index="04" title="Kontakt" />
       <p className="max-w-xl text-2xl font-medium tracking-tight text-balance">
-        Have a project in mind, or just want to say hi? I&apos;d love to hear from you.
+        Máte nápad na projekt, nebo se jen chcete ozvat? Napište mi.
       </p>
       <ul className="mt-8 flex flex-wrap gap-x-8 gap-y-3">
         {links.map((link) => (

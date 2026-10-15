@@ -51,11 +51,11 @@ function Timeline({ title, items }: { title: string; items: ExperienceItem[] }) 
 export default function Experience() {
   return (
     <section id="experience" className="scroll-mt-20 py-16">
-      <SectionHeading index="03" title="Experience" />
+      <SectionHeading index="03" title="Zkušenosti" />
       <div className="space-y-12">
-        <Timeline title="Work" items={work} />
-        <Timeline title="Education" items={education} />
-        <Timeline title="Highlights" items={highlights} />
+        <Timeline title="Zaměstnání" items={work} />
+        <Timeline title="Vzdělání" items={education} />
+        <Timeline title="Další zkušenosti" items={highlights} />
       </div>
     </section>
   );

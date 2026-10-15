@@ -12,7 +12,7 @@ export default function ThemeToggle() {
     <Button
       variant="ghost"
       size="icon-sm"
-      aria-label="Toggle theme"
+      aria-label="Přepnout motiv"
       onClick={() => setTheme(resolvedTheme === "dark" ? "light" : "dark")}
     >
       {/* Both icons are rendered; CSS shows the right one, so there is no flicker on load. */}

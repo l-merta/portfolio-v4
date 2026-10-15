@@ -30,6 +30,7 @@ export const metadata: Metadata = {
     url: "/",
     siteName: profile.name,
     type: "website",
+    locale: "cs_CZ",
   },
   twitter: {
     card: "summary",
@@ -42,7 +43,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     // suppressHydrationWarning: next-themes adds the theme class before React loads.
     <html
-      lang="en"
+      lang="cs"
       suppressHydrationWarning
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
