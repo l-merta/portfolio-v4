@@ -11,7 +11,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { projects, type Project } from "@/data/projects";
+import { currentProjects, projects, type Project } from "@/data/projects";
 
 function ProjectLinks({ project }: { project: Project }) {
   return (
@@ -50,6 +50,45 @@ export default function Projects() {
     <section id="projects" className="scroll-mt-20 py-16">
       <SectionHeading index="01" title="Projekty" />
 
+      {currentProjects.length > 0 && (
+        <div className="mb-14">
+          <h3 className="mb-2 text-sm font-medium">Na čem právě pracuji</h3>
+          <ul className="divide-y">
+            {currentProjects.map((project) => (
+              <li
+                key={project.name}
+                className="flex flex-col gap-1 py-4 sm:flex-row sm:items-baseline sm:gap-6"
+              >
+                <span className="inline-flex w-28 shrink-0 items-center gap-2 font-mono text-xs text-muted-foreground">
+                  <span className="relative flex size-2">
+                    <span className="absolute inline-flex size-full animate-ping rounded-full bg-brand opacity-60" />
+                    <span className="relative inline-flex size-2 rounded-full bg-brand" />
+                  </span>
+                  probíhá
+                </span>
+                <div className="flex-1">
+                  <div className="font-medium">{project.name}</div>
+                  <p className="mt-1 text-sm leading-relaxed text-muted-foreground">
+                    {project.description}
+                  </p>
+                  <div className="mt-3 flex flex-wrap gap-1.5">
+                    {project.tech.map((tech) => (
+                      <Badge key={tech} variant="secondary" className="font-normal">
+                        {tech}
+                      </Badge>
+                    ))}
+                  </div>
+                </div>
+                <div className="pt-1 sm:pt-0">
+                  <ProjectLinks project={project} />
+                </div>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
+
+      <h3 className="mb-4 text-sm font-medium">Vybrané projekty</h3>
       <div className="grid gap-4 sm:grid-cols-2">
         {featured.map((project) => (
           <Card

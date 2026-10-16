@@ -63,3 +63,23 @@ export const projects: Project[] = [
     url: "https://kahoot.mertalukas.cz",
   },
 ];
+
+// Shown at the top of the Projects section under "Na čem právě pracuji".
+export const currentProjects: Project[] = [
+  {
+    name: "DotForge",
+    description:
+      "Nástroj pro příkazovou řádku, který skládá linuxové prostředí z katalogu komponent (kompozitory jako Hyprland a Niri, desktopové shelly, aplikace) a profilů s konfigurací, tapetami a ikonami.",
+    year: "2026",
+    tech: ["Rust", "Linux", "Wayland", "YAML"],
+    repo: "https://github.com/l-merta/dotforge",
+  },
+  {
+    name: "Hack The Box",
+    description:
+      "Učím se kybernetickou bezpečnost a etický hacking v praxi na platformě Hack The Box.",
+    year: "2026",
+    tech: ["Kybernetická bezpečnost", "Linux", "Sítě"],
+    url: "https://www.hackthebox.com",
+  },
+];
