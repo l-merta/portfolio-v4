@@ -59,13 +59,13 @@ export default function Projects() {
                 key={project.name}
                 className="flex flex-col gap-1 py-4 sm:flex-row sm:items-baseline sm:gap-6"
               >
-                <span className="inline-flex w-28 shrink-0 items-center gap-2 font-mono text-xs text-muted-foreground">
+                {/* <span className="inline-flex w-28 shrink-0 items-center gap-2 font-mono text-xs text-muted-foreground">
                   <span className="relative flex size-2">
                     <span className="absolute inline-flex size-full animate-ping rounded-full bg-brand opacity-60" />
                     <span className="relative inline-flex size-2 rounded-full bg-brand" />
                   </span>
                   probíhá
-                </span>
+                </span> */}
                 <div className="flex-1">
                   <div className="font-medium">{project.name}</div>
                   <p className="mt-1 text-sm leading-relaxed text-muted-foreground">

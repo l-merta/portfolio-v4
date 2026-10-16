@@ -69,9 +69,9 @@ export const currentProjects: Project[] = [
   {
     name: "DotForge",
     description:
-      "Nástroj pro příkazovou řádku, který skládá linuxové prostředí z katalogu komponent (kompozitory jako Hyprland a Niri, desktopové shelly, aplikace) a profilů s konfigurací, tapetami a ikonami.",
+      "Nástroj pro příkazovou řádku, který skládá linuxové prostředí z katalogu komponent (kompozitory jako Hyprland a Niri, desktopové shelly, aplikace) a profilů s konfigurací.",
     year: "2026",
-    tech: ["Rust", "Linux", "Wayland", "YAML"],
+    tech: ["Rust", "Linux"],
     repo: "https://github.com/l-merta/dotforge",
   },
   {
