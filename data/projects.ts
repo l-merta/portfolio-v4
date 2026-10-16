@@ -21,7 +21,7 @@ export const projects: Project[] = [
     year: "2025 – nyní",
     tech: ["Next.js", "TypeScript", "Express", "Prisma", "MySQL", "Docker"],
     url: "https://smartshark.tech",
-    note: "Hlavní programátor",
+    note: "Spoluzakladatel",
     featured: true,
   },
   {
