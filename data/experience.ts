@@ -10,9 +10,16 @@ export type ExperienceItem = {
 
 export const work: ExperienceItem[] = [
   {
-    title: "Hlavní programátor",
+    title: "IT support",
+    place: "Nekola-ITS, s.r.o.",
+    period: "2026, červen - nyní",
+    description:
+      "Poskytuji technickou podporu a řeším problémy uživatelů. Spravuji firemní IT infrastruktury, včetně serverů, sítí a firewallů.",
+  },
+  {
+    title: "Spoluzakladatel, hlavní programátor",
     place: "SmartShark Tech",
-    period: "2025 – nyní",
+    period: "2025, březen – nyní",
     description:
       "Vyvíjím firemní platformu od databáze a API přes klientskou a administrátorskou aplikaci až po nasazení v Dockeru.",
     url: "https://smartshark.tech",
@@ -20,15 +27,21 @@ export const work: ExperienceItem[] = [
   {
     title: "Praxe, frontend programátor",
     place: "ČEZ",
-    period: "2025",
+    period: "2025, květen",
   },
 ];
 
 export const education: ExperienceItem[] = [
   {
-    title: "Obor IT",
+    title: "Obor Informační a síťová bezpečnost",
+    place: "Univerzita Hradec Králové",
+    period: "2026 – nyní",
+    url: "https://fim.uhk.cz",
+  },
+  {
+    title: "Obor Informační technologie",
     place: "SOŠ informatiky a spojů a SOU Kolín",
-    period: "2022 – nyní",
+    period: "2022 – 2026",
     url: "https://soskolin.cz",
   },
 ];

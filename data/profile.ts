@@ -4,8 +4,7 @@ export const profile = {
   name: "Lukáš Merta",
   role: "Fullstack webový vývojář",
   location: "Kolín",
-  // Shown as a small green dot next to your role. Set to false to hide it.
-  openToWork: true,
+  openToWork: false, // False - hidden
   openToWorkLabel: "přijímám nové projekty",
   avatar: "https://avatars.githubusercontent.com/u/164738919?v=4",
   intro:

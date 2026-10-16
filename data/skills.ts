@@ -2,19 +2,19 @@
 
 export const skills: { group: string; items: string[] }[] = [
   {
+    group: "DevOps",
+    items: ["Linux a servery", "Docker", "GitHub Actions", "Git"],
+  },
+  {
     group: "Frontend",
-    items: ["React", "Next.js", "TypeScript", "Tailwind CSS", "shadcn/ui", "HTML & CSS"],
+    items: ["React", "Next.js", "TypeScript", "Tailwind CSS"],
   },
   {
     group: "Backend",
-    items: ["Node.js", "Express", "Prisma", "MySQL", "REST API", "Socket.io"],
-  },
-  {
-    group: "DevOps",
-    items: ["Docker", "GitHub Actions", "Linuxové servery", "Cloudflare Tunnel", "Git"],
+    items: ["Node.js", "Express", "Prisma", "MySQL"],
   },
   {
     group: "Další",
-    items: ["C# & Unity", "Figma", "Blender", "Photoshop"],
+    items: ["C# & Unity", "Figma", "Blender"],
   },
 ];
