@@ -1,7 +1,5 @@
 // Everything about "you" lives here. Change a value, save, and the site updates.
 
-import { link } from "fs";
-
 export const profile = {
   name: "Lukáš Merta",
   role: "Fullstack webový vývojář",
@@ -20,6 +18,7 @@ export const profile = {
   links: {
     github: "https://github.com/l-merta",
     linkedin: "https://www.linkedin.com/in/luk%C3%A1%C5%A1-merta-7ab66a343/",
+    email: "lukas.merta26@gmail.com",
     cv: "/cv_Lukas_Merta.pdf",
   },
 } as const;
