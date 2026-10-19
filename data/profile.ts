@@ -8,10 +8,10 @@ export const profile = {
   openToWorkLabel: "přijímám nové projekty",
   avatar: "https://avatars.githubusercontent.com/u/164738919?v=4",
   intro:
-    "Zaměřuji se na tvorbu moderních webových aplikací, které jsou funkční a přehledné. Dělám frontend i backend, nejčastěji v TypeScriptu s Reactem, Next.js a Node.",
+    "Vyvíjím webové aplikace a starám se o jejich infrastrukturu – od frontendové a backendové části přes Linuxové servery až po automatizované nasazování a provoz.",
   about: [
-    "Programování se věnuji od roku 2020 a webovému vývoji od roku 2023. Ať jde o frontend, nebo backend, baví mě dotáhnout nápad až do podoby, kterou lidé opravdu používají.",
-    "Své weby hostuji na vlastním domácím serveru s automatizovaným nasazením přes GitHub. Server spravuji sám, běží na něm databáze, subdomény a kontejnerizované aplikace, dostupné přes Cloudflare Tunnel. Baví mě i sítě, 3D modelování nebo grafický design.",
+    "Věnuji se vývoji webových aplikací, správě Linuxových serverů a počítačovým sítím. Baví mě nejen samotný vývoj, ale i vše kolem něj – od konfigurace serverů a databází přes automatizované nasazování aplikací až po jejich provoz a zabezpečení.",
+    "Nejčastěji pracuji s TypeScriptem, Reactem, Next.js a Node.js. Zkušenosti rozvíjím ve studiu na UHK, v práci i na vlastních projektech.",
   ],
   // Used for the contributions chart under the intro.
   githubUsername: "l-merta",
