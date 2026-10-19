@@ -1,6 +1,8 @@
 import { ArrowDown, FileText } from "lucide-react";
 
 import GithubIcon from "@/components/GithubIcon";
+import LinkedinIcon from "@/components/LinkedinIcon";
+
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
 import { profile } from "@/data/profile";
@@ -51,6 +53,11 @@ export default function Hero() {
         <Button asChild>
           <a href={profile.links.github} target="_blank" rel="noreferrer">
             <GithubIcon /> GitHub
+          </a>
+        </Button>
+        <Button variant="outline" asChild>
+          <a href={profile.links.linkedin} target="_blank" rel="noreferrer">
+            <LinkedinIcon /> LinkedIn
           </a>
         </Button>
         <Button variant="outline" asChild>
