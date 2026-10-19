@@ -31,7 +31,7 @@ jobs:
           context: .
           file: ./Dockerfile.prod
           push: true
-          tags: ${{ secrets.DOCKER_USERNAME }}/portfolio:latest
+          tags: ${{ secrets.DOCKER_USERNAME }}/portfolio-v4:latest
           build-args: |
             NEXT_PUBLIC_SITE_URL=${{ secrets.NEXT_PUBLIC_SITE_URL }}
 
@@ -45,15 +45,15 @@ jobs:
 
       - name: Copy compose files to server
         run: |
-          ssh -i ~/.ssh/id_rsa -o StrictHostKeyChecking=no deploy@mertalukas.cz "mkdir -p /www/deploy/portfolio"
+          ssh -i ~/.ssh/id_rsa -o StrictHostKeyChecking=no deploy@mertalukas.cz "mkdir -p /www/deploy/portfolio-v4"
           rsync -az -e "ssh -i ~/.ssh/id_rsa -o StrictHostKeyChecking=no" \
             docker-compose-prod.yml Makefile \
-            deploy@mertalukas.cz:/www/deploy/portfolio/
+            deploy@mertalukas.cz:/www/deploy/portfolio-v4/
 
       - name: Deploy container on server
         run: |
           ssh -i ~/.ssh/id_rsa -o StrictHostKeyChecking=no deploy@mertalukas.cz << EOF
-            cd /www/deploy/portfolio
+            cd /www/deploy/portfolio-v4
 
             echo "Pulling image from Docker Hub..."
             docker compose -f docker-compose-prod.yml pull

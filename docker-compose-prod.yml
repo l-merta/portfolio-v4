@@ -1,12 +1,12 @@
 services:
   portfolio:
-    container_name: portfolio
-    image: lmerta/portfolio:latest
+    container_name: portfolio-v4
+    image: lmerta/portfolio-v4:latest
     build:
       context: .
       dockerfile: Dockerfile.prod
     ports:
-      - "127.0.0.1:6010:3000"
+      - "127.0.0.1:6020:3000"
     restart: unless-stopped
     environment:
       - NODE_ENV=production
