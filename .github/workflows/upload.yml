@@ -1,0 +1,63 @@
+name: Deploy portfolio - prod
+
+# Same flow as SmartShark: build a Docker image, push it to Docker Hub,
+# then SSH into the server and restart the container with the new image.
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Log in to Docker Hub
+        uses: docker/login-action@v3
+        with:
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: Build and push image
+        uses: docker/build-push-action@v6
+        with:
+          context: .
+          file: ./Dockerfile.prod
+          push: true
+          tags: ${{ secrets.DOCKER_USERNAME }}/portfolio-v4:latest
+          build-args: |
+            NEXT_PUBLIC_SITE_URL=${{ secrets.NEXT_PUBLIC_SITE_URL }}
+
+      - name: Setup SSH key
+        env:
+          DEPLOY_SSH_KEY: ${{ secrets.DEPLOY_SSH_KEY }}
+        run: |
+          mkdir -p ~/.ssh
+          echo "$DEPLOY_SSH_KEY" > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+
+      - name: Copy compose files to server
+        run: |
+          ssh -i ~/.ssh/id_rsa -o StrictHostKeyChecking=no deploy@mertalukas.cz "mkdir -p /www/deploy/portfolio-v4"
+          rsync -az -e "ssh -i ~/.ssh/id_rsa -o StrictHostKeyChecking=no" \
+            docker-compose-prod.yml Makefile \
+            deploy@mertalukas.cz:/www/deploy/portfolio-v4/
+
+      - name: Deploy container on server
+        run: |
+          ssh -i ~/.ssh/id_rsa -o StrictHostKeyChecking=no deploy@mertalukas.cz << EOF
+            cd /www/deploy/portfolio-v4
+
+            echo "Pulling image from Docker Hub..."
+            docker compose -f docker-compose-prod.yml pull
+
+            echo "Restarting container..."
+            sudo make up-prod
+          EOF

@@ -1,36 +1,57 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Lukáš Merta · portfolio v4
 
-## Getting Started
+A minimal, black-and-white personal portfolio built with **Next.js**, **Tailwind CSS** and **shadcn/ui**.
 
-First, run the development server:
+## Editing the content
+
+You don't need to touch any components to update the site. All the text lives in `data/`:
+
+| File | What's in it |
+| --- | --- |
+| `data/profile.ts` | Name, role, intro, about paragraphs, links |
+| `data/projects.ts` | Projects (`featured: true` shows them as cards) |
+| `data/skills.ts` | Skill groups |
+| `data/experience.ts` | Work, education, highlights and the testimonial |
+
+## Running it locally
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
+npm run dev        # http://localhost:3000
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Or in Docker, same as SmartShark:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+make up-dev        # dev server with live reload on http://localhost:3000
+make down-dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Project structure
 
-## Learn More
+```
+app/              Routes (Next.js App Router): layout, page, 404, robots, sitemap
+pageComponents/   Whole pages, assembled from sections
+sections/         Page sections: Hero, Projects, Skills, Experience, ...
+components/       Shared pieces (Header, Footer, theme toggle)
+components/ui/    shadcn/ui components (add more with `npx shadcn@latest add <name>`)
+data/             All the site's content
+lib/              Small helpers
+```
 
-To learn more about Next.js, take a look at the following resources:
+## Colours
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+The palette is shadcn's neutral greys plus one accent, `--brand` (a soft green), defined in `app/globals.css`. Change that one variable to re-tint the whole site. Light and dark mode follow the visitor's system setting and can be toggled in the header.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Deploying
 
-## Deploy on Vercel
+Pushing to `main` runs `.github/workflows/upload.yml`, which works like SmartShark's:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+1. Builds the image from `Dockerfile.prod` and pushes it to Docker Hub as `<DOCKER_USERNAME>/portfolio:latest`.
+2. SSHes into `deploy@mertalukas.cz`, copies `docker-compose-prod.yml` + `Makefile` to `/www/deploy/portfolio`, pulls the image and runs `make up-prod`.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+The container listens on `127.0.0.1:6010`, so point your reverse proxy / Cloudflare Tunnel at that port.
+
+Repository secrets it needs: `DOCKER_USERNAME`, `DOCKER_PASSWORD`, `DEPLOY_SSH_KEY`, and optionally `NEXT_PUBLIC_SITE_URL` (defaults to `https://mertalukas.cz`).
+
+Every pull request also runs `.github/workflows/ci.yml` (lint + build).
